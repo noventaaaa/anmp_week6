@@ -34,6 +34,15 @@ class StudentListFragment : Fragment() {
         viewModel.refresh()
         binding.recView.layoutManager = LinearLayoutManager(context)
         binding.recView.adapter = studentListAdapter
+
+//        refreshLayout.setOnRefreshListener {
+//            recView.visibility = View.GONE
+//            txtError.visibility = View.GONE
+//            progressLoad.visibility = View.VISIBLE
+//            viewModel.refresh()
+//            refreshLayout.isRefreshing = false
+//        }
+
         observeViewModel()
 
     }
